@@ -406,7 +406,7 @@ engine-phase7-menu-native-release: bsp-bundle studio-bundle shaders
 # or Load Game. The two renderer fixture inputs default to files inside
 # XASH_GAME_DATA; contributors can override them for a different fixture.
 native-release: BSP_INPUT ?= $(XASH_GAME_DATA)/valve/maps/c1a0.bsp
-native-release: STUDIO_INPUT ?= $(XASH_GAME_DATA)/valve/models/barney.mdl
+native-release: STUDIO_INPUT ?= $(XASH_GAME_DATA)/valve/models/sphere.mdl
 native-release: bsp-bundle studio-bundle shaders
 	XASH_MODE=client XASH_REF=agc XASH_FILESYSTEM_PRX=1 XASH_SERVER_PRX=1 \
 		XASH_MENU_PRX=1 XASH_CLIENT_PRX=1 XASH_REF_AGC_PRX=1 \
