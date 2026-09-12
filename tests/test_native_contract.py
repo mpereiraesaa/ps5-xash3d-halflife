@@ -304,7 +304,7 @@ def main() -> None:
         raise SystemExit("interactive playable release target missing")
     for item in (
         "native-release: BSP_INPUT ?= $(XASH_GAME_DATA)/valve/maps/c1a0.bsp",
-        "native-release: STUDIO_INPUT ?= $(XASH_GAME_DATA)/valve/models/barney.mdl",
+        "native-release: STUDIO_INPUT ?= $(XASH_GAME_DATA)/valve/models/sphere.mdl",
         "engine-playable-native-release: native-release",
     ):
         if item not in makefile:
