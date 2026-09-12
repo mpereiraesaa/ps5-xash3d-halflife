@@ -24,6 +24,11 @@ behavior. Project-owned probes and host tests validate ABI shape, symbol
 presence, return codes and teardown rather than replacing those libraries.
 Unused optional imports remain out of the release link.
 
+- `sceAgcSuspendPoint`: required by the native submission lifecycle after a
+  successful submit. Fence/event completion does not establish a suspendable
+  queue. The earlier "optional" assessment did not validate system suspension.
+  See [suspend-point correction](GPU_SUSPEND_POINT.md) for evidence and limits.
+
 ## Contribution rule
 
 Before adding an import or changing a platform contract, add a focused host
