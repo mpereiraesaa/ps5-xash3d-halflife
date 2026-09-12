@@ -22,7 +22,8 @@ int main(void)
         sceAgcDcbSetFlip;
     uint32_t *(*indexed_fn)(void *, uint32_t, const void *, uint64_t) =
         sceAgcDcbDrawIndex;
+    int32_t (*suspend_fn)(void) = sceAgcSuspendPoint;
     assert(init_fn != NULL && submit_fn != NULL && flip_fn != NULL &&
-           indexed_fn != NULL);
+           indexed_fn != NULL && suspend_fn != NULL);
     return 0;
 }
